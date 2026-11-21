@@ -1,0 +1,25 @@
+{
+  "name": "primatio-agent-demo",
+  "version": "1.0.0",
+  "description": "Public reference client for the Primatio Vault Zero-Knowledge Agent Protocol (RFC 8628 + ES256 DPoP + HPKE X25519 + Playwright).",
+  "type": "module",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env --import tsx src/playwright-login-demo.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test --test-reporter=spec test/*.test.ts"
+  },
+  "dependencies": {
+    "@hpke/core": "^1.7.5",
+    "@hpke/dhkem-x25519": "^1.6.5",
+    "jose": "^6.1.3"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  }
+}
